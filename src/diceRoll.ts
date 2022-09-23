@@ -26,25 +26,25 @@ while (true) {
 
   // this checks if the user inputted a valid item
   if (userGuess > max || userGuess < min) {
-          console.log('Invalid Number!');
-} else {
-  if (userGuess < max || userGuess > min) {
-    if (userGuess === randomNumber) {
-      console.log('You Guessed Right!')
-      console.log(`It took you ${counter} attempts!`)
-      break
-    } else if (userGuess > randomNumber) {
-      console.log('You Guessed To High')
-      console.log(`This is your ${counter} attempt!`)
-    } else if (userGuess < randomNumber) {
-      console.log(`This is your ${counter} attempt!`)
-      console.log('You Guessed To Low!')
-    }
-    counter = counter + 1
+    console.log('Invalid Number!')
   } else {
-    console.log('Invalid Input!')
-    break
+    if (userGuess < max || userGuess > min) {
+      if (userGuess === randomNumber) {
+        console.log('You Guessed Right!')
+        console.log(`It took you ${counter} attempts!`)
+        break
+      } else if (userGuess > randomNumber) {
+        console.log('You Guessed To High')
+        console.log(`This is your ${counter} attempt!`)
+      } else if (userGuess < randomNumber) {
+        console.log(`This is your ${counter} attempt!`)
+        console.log('You Guessed To Low!')
+      }
+      counter = counter + 1
+    } else {
+      console.log('Invalid Input!')
+      break
+    }
   }
-}
 }
 console.log('\nDone.')

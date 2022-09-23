@@ -25,10 +25,13 @@ while (true) {
   const userGuess = parseFloat(userInput)
 
   // this checks if the user inputted a valid item
+  if (userGuess > max || userGuess < min) {
+          console.log('Invalid Number!');
+} else {
   if (userGuess < max || userGuess > min) {
     if (userGuess === randomNumber) {
       console.log('You Guessed Right!')
-      console.log(`It took you ${counter} attemps!`)
+      console.log(`It took you ${counter} attempts!`)
       break
     } else if (userGuess > randomNumber) {
       console.log('You Guessed To High')
@@ -39,8 +42,9 @@ while (true) {
     }
     counter = counter + 1
   } else {
-    console.log('Invalid Number')
+    console.log('Invalid Input!')
     break
   }
+}
 }
 console.log('\nDone.')

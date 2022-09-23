@@ -31,11 +31,11 @@ while (true) {
       console.log(`It took you ${counter} attemps!`)
       break
     } else if (userGuess > randomNumber) {
-      console.log('You Guessed To Low!')
+      console.log('You Guessed To High')
       console.log(`This is your ${counter} attempt!`)
     } else if (userGuess < randomNumber) {
       console.log(`This is your ${counter} attempt!`)
-      console.log('You Guessed To High!')
+      console.log('You Guessed To Low!')
     }
     counter = counter + 1
   } else {
